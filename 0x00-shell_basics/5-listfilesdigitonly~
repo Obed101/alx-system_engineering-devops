@@ -1,2 +1,0 @@
-#!/bin/bash
-ls -u -l . id -a -g master
