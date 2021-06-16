@@ -1,2 +1,2 @@
 #!/bin/bash
- echo $PATH | wc 1
+echo $((`echo $PATH | grep -o "😕" | wc -l`+ 1))
