@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -d ' ' -f1,2 /tmp/quick | sort /tmp/quick | uniq
+sort | unique -u
