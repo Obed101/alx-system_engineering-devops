@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /tmp/quick | tr -d c
+tr -d [cC]
