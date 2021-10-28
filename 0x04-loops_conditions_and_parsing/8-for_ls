@@ -1,7 +1,8 @@
+
 #!/usr/bin/env bash
 # This Script prints filenames in the 'pwd' begins from '_'
 
-for fname in ./*;
+for fname in *;
 do
     echo "$fname" | cut -d'-' -f 2
 done
