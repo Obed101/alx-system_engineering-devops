@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This file prints numbers with while loop
+
+i=1
+while [ $i -le 20 ]
+do
+	echo $i
+case
