@@ -2,10 +2,10 @@
 # This script creates a .pid file and adds commands in it
 
 touch /var/run/myscript.pid
-echo $$ > /var/myscript.pid
-pidfile=/var/myscript.pid
+echo $$ > /var/run/myscript.pid
+pidfile=/var/run/myscript.pid
 
-trap "echo 'I hate the kill command' sudo pkill -f 100-process_and_pid_file" 9
+trap "echo I hate the kill command" 15
 trap "echo Y U no love me?!" 2
 trap "rm $pidfile" 15
 trap "rm $pidfile" 3
