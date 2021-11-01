@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 # This script creates a .pid file and adds commands in it
 
-touch /var/run/myscript.pid
 echo $$ > /var/run/myscript.pid
 pidfile=/var/run/myscript.pid
 
-trap "echo I hate the kill command" 15
+trap "echo I hate the kill command";"rm pidfile";"exit 0" 15
 trap "echo Y U no love me?!" 2
-trap "rm $pidfile" 15
 trap "rm $pidfile" 3
 
 i=1
