@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
-# Searching for Holberton
+# Searching for School
 
-puts ARGV[0].scan(/Holberton/).join
+puts ARGV[0].scan(/School/).join
