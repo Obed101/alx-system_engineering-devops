@@ -1,7 +1,7 @@
 # This is a Regular Expressions Folder
 
 ```
-/\bObed/i
+/Obed/
 ```
 obed
 `Obed`
