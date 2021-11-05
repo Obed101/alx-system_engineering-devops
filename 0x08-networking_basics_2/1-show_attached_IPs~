@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# This script is displaying attached  IPs
-
-ifconfig | grep -Eo " (addr:)?([0-9]*\.){3}[0-9]*"
