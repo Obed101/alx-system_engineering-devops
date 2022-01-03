@@ -1,4 +1,0 @@
-# This puppet code creates a file in /tmp
-
-file { '/tmp/school'
-x}
