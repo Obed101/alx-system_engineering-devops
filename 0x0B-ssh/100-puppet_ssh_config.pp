@@ -1,7 +1,8 @@
 # This code runs an ssh command
 
-file { '~/.ssh/config':
-ensure                 => 'present',
-PasswordAuthentication => 'no',
-IdentityFile           => '~/.ssh/school'
+file_line { 'creating the config':
+ensure       => 'present',
+line         => 'PasswordAuthentication no',
+path         => '~/.ssh/config',
+line         => 'IdentityFile ~/.ssh/school'
 }
