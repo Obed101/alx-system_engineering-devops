@@ -1,7 +1,6 @@
 # This code runs an ssh command
 include stdlib
 
-class {
 file_line { 'creating the config':
 ensure       => 'present',
 line         => 'PasswordAuthentication no',
@@ -13,5 +12,4 @@ file_line { 'The identity file':
 ensure => 'present',
 path   => '/etc/ssh/ssh_config',
 line   => 'IdentityFile ~/.ssh/school'
-}
 }
