@@ -1,9 +1,0 @@
-# This code runs an ssh command
-
-class ssh {
-file { '~/.ssh/config':
-ensure => 'present',
-PasswordAuthentication => 'no',
-Identity
-}
-}
