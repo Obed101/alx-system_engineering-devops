@@ -1,4 +1,5 @@
 # This code runs an ssh command
+include stdlib
 
 file_line { 'creating the config':
 ensure       => 'present',
