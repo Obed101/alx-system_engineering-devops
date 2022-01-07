@@ -2,5 +2,5 @@
 # This file creates a redirection from the original site
 sudo apt-get install -y nginx
 echo "Hello World!" > /var/www/html/index.html
-sed -i "server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/www.jw.org perminent;" /etc/nginx/sites-available/default
+sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/www.jw.org perminent;" /etc/nginx/sites-available/default
 sudo service nginx restart
