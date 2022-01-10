@@ -2,6 +2,8 @@
 # This file creates a redirection from the original site
 sudo apt-get install -y nginx
 echo "Hello World!" > /var/www/html/index.html
-echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
-sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/www.jw.org permanent;/\n\n\terror_page 404\/custom_404.html {\n\t\troot \/usr\/share\/nginx\/html;\n\t\tinternal;\n\t}" /etc/nginx/sites-available/default
+sudo touch /usr/share/nginx/html/custom_404.html
+sudo chmod u+w /usr/share/nginx/html/custom_404.html
+sudo echo "Ceci n'est pas une page" > /usr/share/nginx/html/custom_404.html
+sudo sed -i "s/server_name _;/server_name _;\n\trewrite ^\/redirect_me https:\/\/www.jw.org permanent;\n\n\terror_page 404\/custom_404.html; {\n\t\troot \/usr\/share\/nginx\/html;\n\t\tinternal;\n\t}/" /etc/nginx/sites-available/default
 sudo service nginx restart
