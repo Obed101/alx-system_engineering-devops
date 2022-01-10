@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This adds a header to display which server running
+curl -sH "X-served-By:X-User-IP" 3.236.112.194
