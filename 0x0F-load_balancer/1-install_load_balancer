@@ -2,8 +2,8 @@
 # This script installs and configures a load balancer
 # Enables haproxy
 sudo apt-get -y install haproxy
-sudo chown $USER:USER /etc/haproxy/haproxy.cfg
-sudo chown $USER:USER /etc/default/haproxy
+sudo chown $USER:$USER /etc/haproxy/haproxy.cfg
+sudo chown $USER:$USER /etc/default/haproxy
 
 put_this_to_the_file=\
 "
