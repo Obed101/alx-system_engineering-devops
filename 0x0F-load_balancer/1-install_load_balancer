@@ -2,13 +2,14 @@
 # This script installs and configures a load balancer
 # Enables haproxy
 sudo apt-get -y install haproxy
+sudo chown $USER:$USER /etc/haproxy/haproxy.cfg
+sudo chown $USER:$USER /etc/default/haproxy
 
 put_this_to_the_file=\
 "
 frontend load_balancer
         bind *:80
         default_backend the_servers
-
 backend the_servers
         balance roundrobin
         mode http
@@ -20,3 +21,4 @@ sudo echo "$put_this_to_the_file" >> /etc/haproxy/haproxy.cfg
 sudo echo "ENABLED=1" >> /etc/default/haproxy
 
 sudo service haproxy restart
+sudo apt autoremove
