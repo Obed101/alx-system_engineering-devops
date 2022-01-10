@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # This adds a header to display which server running
-curl -sH "X-served-By:X-User-IP" 3.236.112.194
+sudo chmod a+w /etc/nginx/sites-enabled/default
+sudo echo "\nserver {\n\tadd_header X-Served-By \$hostname;\n}\n" >> /etc/nginx/sites-enabled/default

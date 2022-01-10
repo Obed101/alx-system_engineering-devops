@@ -21,4 +21,4 @@ sudo echo "$put_this_to_the_file" >> /etc/haproxy/haproxy.cfg
 sudo echo "ENABLED=1" >> /etc/default/haproxy
 
 sudo service haproxy restart
-sudo apt autoremove
+sudo apt -y autoremove
