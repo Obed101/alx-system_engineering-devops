@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 # This adds a header to display which server running
 sudo chmod a+w /etc/nginx/sites-enabled/default
-sudo echo "\nserver {\n\tadd_header X-Served-By \$hostname;\n}\n" >> /etc/nginx/sites-enabled/default
+sedCommand="server_name _;
+	add_header X-Served-By $hostname;"
+sudo sed $sedCommand >> /etc/nginx/sites-enabled/default
