@@ -4,6 +4,7 @@
 sudo apt-get -y install haproxy
 sudo chown $USER:$USER /etc/haproxy/haproxy.cfg
 sudo chown $USER:$USER /etc/default/haproxy
+sudo chmod a+w /etc/haproxy/haproxy.cfg
 
 put_this_to_the_file=\
 "
