@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This script makes nginx run on port 80
+sudo fuser -k 80/tcp
+sudo service nginx start
