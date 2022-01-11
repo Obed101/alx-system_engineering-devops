@@ -10,10 +10,10 @@ put_this_to_the_file=\
 "
 frontend load_balancer
         bind *:80
+        mode http
         default_backend the_servers
 backend the_servers
         balance roundrobin
-        mode http
         server 732-web-01 34.139.153.52:80 check
         server 732-web-02 18.208.132.140:80 check
 "
