@@ -20,7 +20,7 @@ then
 	done
 elif [ $# -eq "2" ];
 then
-	domain=$2
-	subdomain=$1
+	domain=$1
+	subdomain=$2
 	define_domain "$subd" "$domain"
 fi
