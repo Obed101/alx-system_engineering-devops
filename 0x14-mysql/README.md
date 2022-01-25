@@ -1,4 +1,4 @@
-# This Folder Is Handling The Master-Slave (SOurce-Replica) Database
+# This Folder Is Handling The Master-Slave (Source-Replica) Database
 # Usage Using MySQL
 
 * Working with both servers, We first install 
