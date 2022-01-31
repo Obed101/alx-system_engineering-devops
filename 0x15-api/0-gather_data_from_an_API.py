@@ -7,7 +7,7 @@ if __name__ == "__main__":
     id = int(sys.argv[1])
     url = f'https://jsonplaceholder.typicode.com/todos/{id}'
     usr_tasks = requests.get(url).json()
-    user_url = f'https://jsonplaceholder.typicode.com/?userId={id}'
+    user_url = f'https://jsonplaceholder.typicode.com/todos?userId={id}'
     if requests.get(user_url).status_code == 200:
         users = requests.get(user_url).json()
 
