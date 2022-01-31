@@ -5,24 +5,26 @@ import sys
 
 if __name__ == "__main__":
     id = int(sys.argv[1])
-    url = f'https://jsonplaceholder.typicode.com/todos/{id}'
+    user_url = f'https://jsonplaceholder.typicode.com/users/{id}'
+    url = f'https://jsonplaceholder.typicode.com/todos?userId={id}'
+    users = requests.get(user_url).json()
     usr_tasks = requests.get(url).json()
-    user_url = f'https://jsonplaceholder.typicode.com/todos?userId={id}'
-    if requests.get(user_url).status_code == 200:
-        users = requests.get(user_url).json()
 
     tasks_done = 0
-    for task in usr_tasks.values():
+    for task in usr_tasks:
         if task == "completed":
             tasks_done += 1
 
-
-    def print_emp(tasks_done, usr_tasks):
+    def print_emp(tasks_done, usr_tasks, users):
         """ Prints Employees tasks done and total tasks """
-        task_info = "Employee {} is done with tasks({}/{}):".format(
-                users.get('name'), tasks_done, len(usr_tasks))
-        print(task_info)
-        for task in usr_tasks.values():
-            if task == "completed":
-                print(f"\t {usr_tasks.get('title')}")
-    print_emp(tasks_done, usr_tasks)
+        for user in users:
+            print(user)
+            if user.get('userId'):
+                task_info = "Employee {} is done with tasks({}/{}):".format(
+                        user.get('name'), tasks_done, len(usr_tasks))
+                print(task_info)
+                break
+        for task in usr_tasks:
+            if task.get('completed'):
+                print(f"\t {task.get('title')}")
+    print_emp(tasks_done, usr_tasks, users)
