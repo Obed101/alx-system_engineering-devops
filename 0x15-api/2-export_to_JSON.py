@@ -15,9 +15,9 @@ if __name__ == '__main__':
 
     for task in tasks:
         collect = {}
-        collect['title'] = task.get('title')
-        collect['status'] = task.get('completed')
-        collect['name'] = users.get('username')
+        collect['task'] = task.get('title')
+        collect['completed'] = task.get('completed')
+        collect['username'] = users.get('username')
         retrieve.append(collect)
     collected = {}
     collected[id] = retrieve
