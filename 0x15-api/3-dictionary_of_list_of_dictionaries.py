@@ -17,8 +17,8 @@ if __name__ == '__main__':
         username[user.get('id')] = user.get('username')
     for task in tasks:
         collect = {}
-        collect['title'] = task.get('title')
-        collect['status'] = task.get('completed')
+        collect['task'] = task.get('title')
+        collect['completed'] = task.get('completed')
         collect['username'] = username.get(task.get('userId'))
         employee.get(task.get('userId')).append(collect)
 
