@@ -17,7 +17,6 @@ if __name__ == "__main__":
 
     def print_emp(tasks_done, usr_tasks, users):
         """ Prints Employees tasks done and total tasks """
-        #if users.get('userId'):
         task_info = "Employee {} is done with tasks({}/{}):".format(
                 users.get('name'), tasks_done, len(usr_tasks))
         print(task_info)
