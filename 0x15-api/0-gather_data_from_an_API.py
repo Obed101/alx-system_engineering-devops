@@ -22,5 +22,5 @@ if __name__ == "__main__":
         print(task_info)
         for task in usr_tasks:
             if task.get('completed'):
-                print("\t {}".forat(task.get('title')))
+                print("\t {}".format(task.get('title')))
     print_emp(tasks_done, usr_tasks, users)
