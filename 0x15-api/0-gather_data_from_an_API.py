@@ -12,18 +12,15 @@ if __name__ == "__main__":
 
     tasks_done = 0
     for task in usr_tasks:
-        if task == "completed":
+        if task.get('completed'):
             tasks_done += 1
 
     def print_emp(tasks_done, usr_tasks, users):
         """ Prints Employees tasks done and total tasks """
-        for user in users:
-            print(user)
-            if user.get('userId'):
-                task_info = "Employee {} is done with tasks({}/{}):".format(
-                        user.get('name'), tasks_done, len(usr_tasks))
-                print(task_info)
-                break
+        #if users.get('userId'):
+        task_info = "Employee {} is done with tasks({}/{}):".format(
+                users.get('name'), tasks_done, len(usr_tasks))
+        print(task_info)
         for task in usr_tasks:
             if task.get('completed'):
                 print(f"\t {task.get('title')}")
