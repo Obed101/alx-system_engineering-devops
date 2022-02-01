@@ -5,8 +5,8 @@ import sys
 
 if __name__ == "__main__":
     id = int(sys.argv[1])
-    user_url = f'https://jsonplaceholder.typicode.com/users/{id}'
-    url = f'https://jsonplaceholder.typicode.com/todos?userId={id}'
+    user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(id)
+    url = 'https://jsonplaceholder.typicode.com/todos?userId={}'.format(id)
     users = requests.get(user_url).json()
     usr_tasks = requests.get(url).json()
 
@@ -22,5 +22,5 @@ if __name__ == "__main__":
         print(task_info)
         for task in usr_tasks:
             if task.get('completed'):
-                print(f"\t {task.get('title')}")
+                print(f"\t {}".forat(task.get('title')))
     print_emp(tasks_done, usr_tasks, users)
