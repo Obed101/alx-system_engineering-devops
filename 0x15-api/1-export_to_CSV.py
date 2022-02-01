@@ -17,4 +17,4 @@ if __name__ == '__main__':
         convert = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in tasks:
             convert.writerow(id, users.get('username'), task.get('completed'),
-                    task.get('title'))
+                             task.get('title'))
