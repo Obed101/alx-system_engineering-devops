@@ -16,5 +16,5 @@ if __name__ == '__main__':
     with open(csv_file, 'w', newline='') as file:
         convert = csv.writer(file, quoting=csv.QUOTE_ALL)
         for task in tasks:
-            convert.writerow(id, users.get('username'), task.get('completed'),
-                             task.get('title'))
+            convert.writerow([id, users.get('username'), task.get('completed'),
+                             task.get('title')])
