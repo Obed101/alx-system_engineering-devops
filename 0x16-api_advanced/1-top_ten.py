@@ -8,10 +8,10 @@ def top_ten(subreddit):
 
     url = 'https://www.reddit.com/r/{}/.json'.format(subreddit)
     headers = {"User-Agent": "Obed'sBrowser/5.0 (Windows NT 10.0)"}
-    n_of_subs = requests.get(url, headers=headers)
+    ten = requests.get(url, headers=headers)
 
-    if n_of_subs:
+    if ten:
         for top in range(10):
-            print(n_of_subs.json()['data'][top]['data']['title'])
+            print(ten.json()['data'][top]['data']['title'])
     else:
         print('None')
