@@ -11,5 +11,6 @@ def number_of_subscribers(subreddit):
     print(n_of_subs.status_code)
     if "subscribers" in n_of_subs:
         subs = n_of_subs.get("subscribers")
+        
         return subs if subs and not n_of_subs.status_code == 404 else 0
-    return 0
+    return number_of_subscribers(subreddit)
