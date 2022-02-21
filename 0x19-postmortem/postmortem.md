@@ -21,6 +21,6 @@ _7 PM_ – The issue was completely resolved and the site was up and running.
 ## Corrective and preventative measures
 
 The following measures will be put in place to make sure the same thing never repeats itself:  
-•&nbsp;&nbsp;&nbsp;&nbsp;The firewall configuration files’ content will always be simple and clear.  
-•&nbsp;&nbsp;&nbsp;&nbsp;Burden on the firewall will be reduced by regularly removing unwanted traffic on the firewall.
+&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;The firewall configuration files’ content will always be simple and clear.  
+&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;Burden on the firewall will be reduced by regularly removing unwanted traffic on the firewall.
 
