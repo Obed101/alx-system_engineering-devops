@@ -1,4 +1,5 @@
 # MY FIRST POSTMORTEM
+![403 Error](https://user-images.githubusercontent.com/84608830/154974907-1b361a17-2ad6-43e0-bc1c-65198ddf4819.png)
 
 # An Outage Experience I Had 
 
@@ -24,4 +25,3 @@ The following measures will be put in place to make sure the same thing never re
 &nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;The firewall configuration files’ content will always be simple and clear.  
 &nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;&nbsp;Burden on the firewall will be reduced by regularly removing unwanted traffic on the firewall.
 
-![403 Error](https://user-images.githubusercontent.com/84608830/154974907-1b361a17-2ad6-43e0-bc1c-65198ddf4819.png)
