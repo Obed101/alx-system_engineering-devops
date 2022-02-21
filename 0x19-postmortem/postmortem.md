@@ -12,7 +12,7 @@ _5:51 PM_ – The on-call person was trying to find out what was wrong with the 
 _5:59 PM_ – The on-call engineer escalated the task to other software engineers to check it out as well.  
 _6 PM_ – The whole website was not accessible.  
 _6:30 PM_ – The engineers found out the issue was with the firewall.  
-_6:45 PM_ – Firewall traffic was cleaned up and unused rules were removed from the to prevent accidents.  
+_6:45 PM_ – Firewall traffic was cleaned up and unused rules were removed from the firewall to prevent accidents.  
 _7 PM_ – The issue was completely resolved and the site was up and running.  
 
 ## Root cause and resolution
