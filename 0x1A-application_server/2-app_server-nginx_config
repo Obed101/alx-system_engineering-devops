@@ -1,0 +1,40 @@
+##
+# You should look at the following URL's in order to grasp a solid understanding
+# of Nginx configuration files in order to fully unleash the power of Nginx.
+# http://wiki.nginx.org/Pitfalls
+# http://wiki.nginx.org/QuickStart
+# http://wiki.nginx.org/Configuration
+#
+# Generally, you will want to move this file somewhere, and start with a clean
+# file but keep this around for reference. Or just disable in sites-enabled.
+#
+# Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+##
+
+# Default server configuration
+#
+
+# Below are the settings I made to configure nginx server
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    add_header X-Served-By 732-web-01;
+    root   /var/www/html;
+    index  index.html index.htm;
+    location /hbnb_static {
+        alias /data/web_static/current;
+        index index.html index.htm;
+    }
+    server_name _;
+        rewrite ^/redirect_me https://www.jw.org permanent;
+
+        error_page 404 /custom_404.html;
+        location = /404.html {
+                root /var/www/error;
+                internal;
+        }
+
+        location /airbnb-onepage/ {
+                proxy_pass http://localhost:5000;
+        }
+}
